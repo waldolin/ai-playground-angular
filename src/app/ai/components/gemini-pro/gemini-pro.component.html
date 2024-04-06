@@ -1,0 +1,31 @@
+<div class="px-3 py-1">
+  <div>
+    <label for="inputText" class="block text-purple-700 text-sm font-bold mb-2"></label>
+    <input type="text" id="inputText" name="inputText" placeholder="Input prompt here"
+      class="w-full py-2 px-3 text-purple-700 leading-tight border rounded shadow appearance-none focus:outline-none focus:shadow-outline" [formControl]="prompt" />
+  </div>
+
+  <button type="button" class="mt-2 px-4 py-1 text-sm font-semibold border border-purple-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+    [ngClass]="{
+      'text-purple-300 bg-purple-300': prompt.invalid,
+      'text-purple-800 bg-purple-300 hover:text-white hover:bg-purple-600': !prompt.invalid
+    }"
+    [disabled]="prompt.invalid"
+    (click)="sendText()">Send Text</button>
+
+  <ng-container *ngIf="isLoading; else responseTpl">
+    <p class="my-2">Loading ...</p>
+  </ng-container>
+
+  <ng-template #responseTpl>
+    <div class="py-2">
+      <div *ngIf="!!promptText" class="py-1 bg-gray-300 rounded-md">{{ promptText }}</div>
+      <ng-container *ngIf="isBlocked; else defaultResponse">
+        <p class="text-red-600">{{ responseText }}</p>
+      </ng-container>
+      <ng-template #defaultResponse>
+        <markdown>{{ responseText }}</markdown>
+      </ng-template>
+    </div>
+  </ng-template>
+</div>
