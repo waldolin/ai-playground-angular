@@ -18,8 +18,6 @@ export class GeminiProVisionComponent {
   isLoading = false;
   isBlocked = false;
 
-  genConfig$ = firstValueFrom(this.generativeAiService.genConfig$);
-
   prompt = this.formBuilder.control('', Validators.required);
   promptText = '';
 
