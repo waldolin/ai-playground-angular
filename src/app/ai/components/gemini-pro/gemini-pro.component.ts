@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ViewEncapsulation } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { firstValueFrom } from 'rxjs';
 import { MarkdownComponent } from 'ngx-markdown';
 import { GenerativeAiService } from '../../../services/generative-ai.service';
 
@@ -20,6 +19,7 @@ export class GeminiProComponent {
 
   prompt = this.formBuilder.control('', Validators.required);
   promptText = '';
+  totalTokens = 0;
   responseText = '';
 
   constructor(public formBuilder: FormBuilder, private cdRef: ChangeDetectorRef,
@@ -32,6 +32,9 @@ export class GeminiProComponent {
     this.generativeAiService.resetConfig();
     this.isLoading = true;
     this.isBlocked = false;
+
+    const { totalTokens } = await genModel.countTokens(this.promptText);
+    this.totalTokens = totalTokens;
 
     const result = await genModel?.generateContent(this.promptText);
     const response = await result?.response;

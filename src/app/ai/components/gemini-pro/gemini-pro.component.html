@@ -13,6 +13,11 @@
     [disabled]="prompt.invalid"
     (click)="sendText()">Send Text</button>
 
+  <div class="inline-flex mx-2 gap-2">
+    <div class="p-1 text-xs font-bold bg-green-200 rounded-xl">字元數 {{ prompt.value?.trim()?.length }}</div>
+    <div *ngIf="totalTokens > 0" class="p-1 text-xs font-bold bg-blue-200 rounded-xl">token數 {{ totalTokens }}</div>
+  </div>
+
   <ng-container *ngIf="isLoading; else responseTpl">
     <p class="my-2">Loading ...</p>
   </ng-container>
