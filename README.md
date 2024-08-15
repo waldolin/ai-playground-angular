@@ -37,3 +37,6 @@ on your local pc and andriod envirnment to chat. Try to Use our lora tunning mod
 ## Demo
 [StackBlitz](https://stackblitz.com/~/github.com/Kun-Neng/ai-playground-angular)
 [ai-masterdream-copilot](https://github.com/waldolin/ai-masterdream-copilot)
+
+## Special thanks to
+Kun-Neng Hung
