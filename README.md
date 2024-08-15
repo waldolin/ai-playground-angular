@@ -29,5 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Article
 [使用 Angular 結合 Google Gemini 打造客製化的 AI 互動應用程式](https://medium.com/@kunneng.hung/%E4%BD%BF%E7%94%A8-angular-%E7%B5%90%E5%90%88-google-gemini-%E6%89%93%E9%80%A0%E5%AE%A2%E8%A3%BD%E5%8C%96%E7%9A%84-ai-%E4%BA%92%E5%8B%95%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-a60c6f1df82e)
 
+
+## Running local llm 
+It is a function demo in llm folder using LM studio running local server
+on your local pc and andriod envirnment to chat. Try to Use our lora tunning model in gemma 2B!
+
 ## Demo
 [StackBlitz](https://stackblitz.com/~/github.com/Kun-Neng/ai-playground-angular)
+[ai-masterdream-copilot](https://github.com/waldolin/ai-masterdream-copilot)
