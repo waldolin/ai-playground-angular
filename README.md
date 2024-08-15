@@ -35,7 +35,8 @@ It is a function demo in llm folder using LM studio running local server
 on your local pc and andriod envirnment to chat. Try to Use our lora tunning model in gemma 2B!
 
 ## Demo
-[StackBlitz](https://stackblitz.com/~/github.com/Kun-Neng/ai-playground-angular)
+[StackBlitz for waldolin](https://stackblitz.com/~/github.com/waldolin/ai-playground-angular)
+[StackBlitz for Kun-Neng](https://stackblitz.com/~/github.com/Kun-Neng/ai-playground-angular)
 [ai-masterdream-copilot](https://github.com/waldolin/ai-masterdream-copilot)
 
 ## Special thanks to
